@@ -1,0 +1,28 @@
+{
+  "collection": "Events",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": ["_id", "start_time", "status", "start_camera_id", "participant_tracking_ids"],
+      "properties": {
+        "_id": { "bsonType": "objectId" },
+        "start_time": { "bsonType": "date" },
+        "end_time": { "bsonType": ["date", "null"] },
+        "status": { "bsonType": "string", "enum": ["active", "ended_cleared", "ended_escalated"] },
+        "start_camera_id": { "bsonType": "objectId" },
+        "involved_cameras": { "bsonType": ["array", "null"], "items": { "bsonType": "objectId" } },
+        "participant_tracking_ids": { "bsonType": "array", "items": { "bsonType": "string" } },
+        "final_summary": { "bsonType": ["string", "null"] },
+        "created_at": { "bsonType": ["date", "null"] },
+        "updated_at": { "bsonType": ["date", "null"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "warn",
+  "x-indexes": [
+    { "keys": { "status": 1 }, "options": {} },
+    { "keys": { "participant_tracking_ids": 1 }, "options": {} }
+  ]
+}

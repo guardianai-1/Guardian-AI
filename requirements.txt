@@ -1,0 +1,9 @@
+opencv-python
+mediapipe
+ultralytics
+numpy
+python-dotenv
+mss
+Pillow
+pymongo
+lap

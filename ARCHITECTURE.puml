@@ -1,0 +1,142 @@
+@startuml
+' Application Architecture - Components and Data Flow
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam monochrome false
+skinparam defaultTextAlignment center
+skinparam wrapWidth 200
+
+title Video Threat Detection – Architecture (Components & Flow)
+
+package "Runtime" {
+  [security_threat_detection.py\n<<Detector>>] as Detector
+  [security_db_writer.py\n<<DB Writer>>] as DBWriter
+  [security_worker.py\n<<VLM Worker>>] as VLMWorker
+  [security_db_queries.py\n<<Data Access Layer>>] as DAL
+}
+
+package "Configuration & Assets" {
+  [ .env\nMONGO_URI, DB_NAME, THREAT_* ] as Env
+  [ YOLO Pose Weights\n(yolov8*-pose.pt) ] as Weights
+}
+
+package "Inter-process Queues" {
+  [db_writer_queue\n<<queue>>] as QDB
+  [vlm_task_queue\n<<queue>>] as QVLM
+  [vlm_result_queue\n<<queue>>] as QVLMR
+}
+
+package "Persistence" {
+  database "MongoDB" as Mongo {
+    [Cameras]
+    [TrackedSubjects]
+    [Events]
+    [VlmLogs]
+  }
+}
+
+Detector -down-> QDB : create_new_subject\nupdate_subject_status\ncreate_event\nadd_participant_to_event\nend_event
+Detector -down-> QVLM : analyze_threat\n{event_id, subjects, base64_frame}
+VLMWorker -left-> QVLMR : results / summaries (optional)
+DBWriter -right-> DAL
+DAL -right-> Mongo
+
+Env -up-> Detector : config
+Env -up-> DBWriter : config
+Env -up-> VLMWorker : config
+Weights -up-> Detector : model load
+
+@enduml
+
+@startuml
+' Event Lifecycle – Sequence
+hide footbox
+skinparam shadowing false
+skinparam sequenceArrowThickness 1
+skinparam sequenceLifeLineBorderColor #999
+skinparam sequenceLifeLineBorderThickness 1
+skinparam lifelineStrategy solid
+
+actor "Video Source" as Cam
+participant Detector as D
+participant "db_writer_queue" as Qdb
+participant DBWriter as W
+database Mongo as M
+participant "vlm_task_queue" as Qvlm
+participant VLMWorker as VW
+
+Cam -> D: Frames
+D -> D: Detect persons (YOLO pose)\nEvaluate on-ground heuristic
+alt suspicious confirmed (POSE_CONFIRMATION_SEC)
+  D -> Qdb: create_event(event_id, start_camera_id, first_participant)
+  Qdb -> W: task
+  W -> M: insert Events
+end
+
+loop every VLM_INTERVAL_SEC while event active
+  D -> Qvlm: analyze_threat(event_id, subjects, base64_frame)
+  Qvlm -> VW: task
+  VW -> VW: analyze frame (VLM)
+  VW -> M: insert VlmLogs\n(optional: embedding)
+end
+
+alt subject cleared
+  D -> Qdb: end_event(event_id, final_status, summary)
+  Qdb -> W: task
+  W -> M: update Events
+end
+@enduml
+
+@startuml
+' Deployment Diagram – Local & Containerized
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam nodesep 30
+skinparam ranksep 30
+
+node "Developer Machine" as Dev {
+  node "Process Group" {
+    component "Detector (security_threat_detection.py)" as C1
+    component "DB Writer (security_db_writer.py)" as C2
+    component "VLM Worker (security_worker.py)" as C3
+    artifact ".env" as Aenv
+    Aenv -down-> C1
+    Aenv -down-> C2
+    Aenv -down-> C3
+  }
+}
+
+node "Cloud" {
+  node "MongoDB Atlas" as Atlas {
+    database "MongoDB" as MDB
+  }
+}
+
+C1 --> MDB : read/write via DAL
+C2 --> MDB : writes
+C3 --> MDB : writes
+
+' Containerized option (one detector per camera)
+node "Container Host / Orchestrator" as K8s {
+  node "detector-[N]" {
+    component "Detector" as PodDet
+  }
+  node "db-writer" {
+    component "DB Writer" as PodDbw
+  }
+  node "ai-worker[x]" {
+    component "VLM Worker" as PodVlm
+  }
+}
+
+PodDet --> MDB
+PodDbw --> MDB
+PodVlm --> MDB
+
+note bottom of K8s
+- Scale PodDet horizontally by camera count
+- Scale PodVlm by analysis throughput
+- Configure secrets/env for MONGO_URI, DB_NAME, THREAT_*
+end note
+
+@enduml

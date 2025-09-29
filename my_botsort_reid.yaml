@@ -1,0 +1,54 @@
+# my_botsort_reid.yaml
+# Ultralytics BoT-SORT tracker settings
+tracker_type: botsort
+
+# BoT-SORT settings
+new_track_thresh: 0.6 #1st parameter...
+#Only start a new track if an object is atleast 80% identified to be a human
+
+track_high_thresh: 0.5 #2nd parameter... 
+#This is the first filter applied to the incoming detections. 
+#Any detection with a score above track_high_thresh is considered a "high-confidence detection" 
+#and is used in this first matching attempt. Detections with scores below this 
+#(but above track_low_thresh) are set aside for Step 3.
+#How it affects the next steps: The value of this threshold determines the pool of "good"
+#detections for the most important matching step. A high value means you are very strict,
+#leading to fewer but more reliable initial matches. A low value is more lenient but risks 
+#incorrect associations.
+
+match_thresh: 0.7 #3rd Parameter 
+#When it's called: During the association process. For every track-detection pair,
+#their IoU is calculated. If the IoU is above match_thresh, it's considered a potential match.
+#How it works: This is the primary spatial matching criterion. A lower value (e.g., 0.8) 
+#means you do not require the predicted box and the detected box to overlap almost perfectly.
+#A higher value (e.g., 0.8) is more lenient.
+
+track_low_thresh: 0.1 #This allows the tracker to keep an ID alive using a very weak detection.
+#This is the core of ByteTrack's philosophy. It allows the tracker to "rescue" tracks that would 
+#otherwise be marked as lost. Setting this too low might introduce matches to 
+#actual background noise, while setting it too high defeats the purpose of the second-stage matching.
+
+track_buffer: 300 # You might want to increase this for longer occlusions
+
+fuse_score: True # Whether to fuse confidence scores with the iou distances before matching
+
+# GMC module
+gmc_method: sparseOptFlow
+
+# ReID module
+with_reid: True # <--- THIS IS THE KEY CHANGE!
+
+proximity_thresh: 0.5 #4th Parameter
+#This is the Plausibility Gate for ReID. Its job is to answer the question: "For a track and 
+#detection that were not a confident IoU match, are they even close enough to be worth the 
+#expensive computation of a ReID comparison?" It's a pre-filter to save processing power.
+#it fails this gate.
+#Result: The ReID comparison is never performed. The algorithm efficiently discards this pair
+#as being too far apart to be a plausible match, saving computational resources.
+#ie this should always be lower than match_thresh.
+
+appearance_thresh: 0.25 #5th Parameter
+#Minimum appearance similarity required for ReID. Sets how visually 
+#similar two detections must be to be linked.
+
+model: auto # Start with 'auto', it's the fastest Re-ID option

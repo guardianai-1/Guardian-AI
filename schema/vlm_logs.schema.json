@@ -1,0 +1,33 @@
+{
+  "collection": "VlmLogs",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": ["event_id", "timestamp", "collective_description", "subjects_in_log"],
+      "properties": {
+        "_id": { "bsonType": "objectId" },
+        "event_id": { "bsonType": "objectId" },
+        "timestamp": { "bsonType": "date" },
+        "camera_id": { "bsonType": ["objectId", "null"] },
+        "frame_image_url": { "bsonType": ["string", "null"] },
+        "collective_description": { "bsonType": "string" },
+        "description_embedding": {
+          "bsonType": ["array", "null"],
+          "items": { "bsonType": ["double", "decimal"] },
+          "description": "Text embedding for semantic search (requires Atlas Vector Search index)"
+        },
+        "subjects_in_log": { "bsonType": "array", "items": { "bsonType": "string" } },
+        "created_at": { "bsonType": ["date", "null"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "warn",
+  "x-indexes": [
+    { "keys": { "event_id": 1, "timestamp": 1 }, "options": {} },
+    { "keys": { "subjects_in_log": 1 }, "options": {} },
+    { "keys": { "timestamp": 1 }, "options": { "expireAfterSeconds": 7776000 }, "note": "90 days TTL" },
+    { "note": "Create Atlas Vector Search index named 'vlm_log_index' on path 'description_embedding'" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "collection": "TrackedSubjects",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": ["tracking_id", "current_status"],
+      "properties": {
+        "_id": { "bsonType": "objectId" },
+        "tracking_id": { "bsonType": "string", "minLength": 3, "description": "Application-level unique person id (e.g., person_ab12cd34)" },
+        "current_status": { "bsonType": "string", "enum": ["normal", "suspicious", "threat_cleared"] },
+        "current_camera_id": { "bsonType": ["objectId", "null"] },
+        "representative_thumbnail_url": { "bsonType": ["string", "null"] },
+        "reid_vector": {
+          "bsonType": ["array", "null"],
+          "items": { "bsonType": ["double", "decimal"] },
+          "description": "Embedding vector for ReID (requires Atlas Vector Search index)"
+        },
+        "created_at": { "bsonType": ["date", "null"] },
+        "updated_at": { "bsonType": ["date", "null"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "validationLevel": "moderate",
+  "validationAction": "warn",
+  "x-indexes": [
+    { "keys": { "tracking_id": 1 }, "options": { "unique": true } },
+    { "note": "Create Atlas Vector Search index named 'reid_vector_index' on path 'reid_vector'" }
+  ]
+}
