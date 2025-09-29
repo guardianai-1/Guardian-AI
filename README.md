@@ -56,3 +56,50 @@ Environment variables
 - MONGO_URI: MongoDB connection string
 - DB_NAME: Database name (default: video_analytics_db)
 - THREAT_VIDEO_SOURCE: Video input (int camera index or absolute file path)
+
+
+
+// ...existing code...
+
+## Contributing (macOS – no prior coding required)
+
+Follow these steps exactly in the Terminal app.
+
+1) Install Git (the tool to get the code)
+- Open “Terminal” (press Cmd+Space, type “Terminal”, press Enter).
+- Run:
+```bash
+brew install git
+```
+
+2) Get the project code
+- Run:
+```bash
+git clone https://github.com/guardianai-1/Guardian-AI.git
+cd Guardian-AI
+```
+
+3) Install “uv” (manages Python and packages for you)
+- Run:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+- Close and reopen Terminal (or run: source ~/.zshrc) so the “uv” command is available.
+
+4) Start the app
+- Make the script executable and run it:
+```bash
+chmod +x ./scripts/run_with_uv.sh
+./scripts/run_with_uv.sh
+```
+
+What you should see
+- The first run downloads Python and the app’s dependencies (this can take a few minutes).
+- A window may open showing your camera feed. If macOS asks for Camera permission, click “Allow”.
+
+Troubleshooting
+- Command not found: brew → Install Homebrew from https://brew.sh and try again.
+- Permission denied on camera → System Settings → Privacy & Security → Camera → allow Terminal/VS Code.
+- Still stuck? Copy the error message and open an issue in the repository.
+
+// ...existing code...
