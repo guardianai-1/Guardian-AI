@@ -1,0 +1,54 @@
+@startuml
+' Conference ReID – Mixed Overview (Headless)
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam wrapWidth 240
+skinparam componentStyle rectangle
+
+title Conference ReID – Mixed Overview (No On‑Screen Display)
+
+actor "Attendees" as People
+
+package "Conference Venue" {
+  rectangle "Cameras (Multiple)" as Cameras
+}
+
+package "Demo System (Headless)" {
+  rectangle "Detector\n- Person detection\n- Extract ReID embeddings" as Detector
+  rectangle "ReID Matcher\n- Similarity match\n- Assign known/new ID" as Matcher
+  rectangle "DB Writer\n- Persist results" as DBW
+}
+
+database "MongoDB" as DB {
+  [Cameras]
+  [TrackedSubjects]
+  [Events]
+  [VlmLogs (optional)]
+}
+
+' Data flow (concise)
+People --> Cameras : In view
+Cameras --> Detector : Live streams
+Detector --> Matcher : Embedding + track info
+Matcher --> DBW : Known ID or New anonymous ID
+DBW --> DB : Upserts subjects/events/logs
+
+note right of Matcher
+ReID check:
+- Compare embedding to stored ones
+- If similarity stays high briefly → reuse ID
+- Else → create new anonymous ID
+end note
+
+note bottom of DB
+All records tagged with camera_id (Cameras)
+Embeddings can use Vector Search index
+No on‑screen display during test
+end note
+
+note bottom
+Scale by adding cameras & detector instances
+Optionally enable periodic VLM summaries
+end note
+
+@enduml

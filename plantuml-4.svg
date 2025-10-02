@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="959px" preserveAspectRatio="none" style="width:1450px;height:959px;background:#FFFFFF;" version="1.1" viewBox="0 0 1450 959" width="1450px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.2969" id="_title" style="stroke:none;stroke-width:1.0;" width="369" x="533.75" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="359" x="538.75" y="22.9951">Guardian-AI - System Design (Headless, ReID)</text><!--MD5=[6df03f57e894104f2d4cee60f6261502]
+cluster Detectors--><g id="cluster_Detectors"><path d="M803.5,143.2969 L1004.5,143.2969 A3.75,3.75 0 0 1 1007,145.7969 L1014,165.5938 L1014.5,165.5938 A2.5,2.5 0 0 1 1017,168.0938 L1017,279.7969 A2.5,2.5 0 0 1 1014.5,282.2969 L803.5,282.2969 A2.5,2.5 0 0 1 801,279.7969 L801,145.7969 A2.5,2.5 0 0 1 803.5,143.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="801" x2="1014" y1="165.5938" y2="165.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="200" x="805" y="158.292">Detectors (1 per camera)</text></g><!--MD5=[2c2e2644034c00788261e03c85b06837]
+cluster Core--><g id="cluster_Core"><path d="M21.5,346.2969 L133.5,346.2969 A3.75,3.75 0 0 1 136,348.7969 L143,368.5938 L665.5,368.5938 A2.5,2.5 0 0 1 668,371.0938 L668,482.7969 A2.5,2.5 0 0 1 665.5,485.2969 L21.5,485.2969 A2.5,2.5 0 0 1 19,482.7969 L19,348.7969 A2.5,2.5 0 0 1 21.5,346.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="19" x2="143" y1="368.5938" y2="368.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="111" x="23" y="361.292">Core Services</text></g><!--MD5=[967398ea597f9d80fb373fd98699d6c2]
+cluster Q--><g id="cluster_Q"><path d="M694.5,367.7969 L756.5,367.7969 A3.75,3.75 0 0 1 759,370.2969 L766,390.0938 L1199.5,390.0938 A2.5,2.5 0 0 1 1202,392.5938 L1202,461.2969 A2.5,2.5 0 0 1 1199.5,463.7969 L694.5,463.7969 A2.5,2.5 0 0 1 692,461.2969 L692,370.2969 A2.5,2.5 0 0 1 694.5,367.7969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="692" x2="766" y1="390.0938" y2="390.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="61" x="696" y="382.792">Queues</text></g><!--MD5=[2602686156deb23041d8774c029dbcdd]
+cluster MDB--><g id="cluster_MDB"><path d="M6,552.2969 C6,542.2969 186.5,542.2969 186.5,542.2969 C186.5,542.2969 367,542.2969 367,552.2969 L367,831.7969 C367,841.7969 186.5,841.7969 186.5,841.7969 C186.5,841.7969 6,841.7969 6,831.7969 L6,552.2969 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><path d="M6,552.2969 C6,562.2969 186.5,562.2969 186.5,562.2969 C186.5,562.2969 367,562.2969 367,552.2969 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="74" x="149.5" y="577.292">MongoDB</text></g><!--MD5=[98de2539fa00c3ad44be4a40bb21de68]
+entity Det--><g id="elem_Det"><rect fill="#F1F1F1" height="68.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="836.5" y="197.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="878.5" y="220.292">Detector</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="855.5" y="236.5889">- Person detect</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="846.5" y="252.8857">- ReID embedding</text></g><!--MD5=[0b4846db015581273f652c6d394a5ede]
+entity Matcher--><g id="elem_Matcher"><rect fill="#F1F1F1" height="68.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="139" x="512.5" y="400.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="535.5" y="423.292">ReID Matcher</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="522.5" y="439.5889">- Similarity search</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="528" y="455.8857">- ID assignment</text></g><!--MD5=[ae6719e747a24c00f53ebd9888a19a9a]
+entity DBW--><g id="elem_DBW"><rect fill="#F1F1F1" height="52.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="237" x="240.5" y="408.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="326.5" y="431.292">DB Writer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="217" x="250.5" y="447.5889">- Upserts Subjects/Events/Logs</text></g><!--MD5=[7a1f58b9885572d02070a9fdfbd9260c]
+entity VLM--><g id="elem_VLM"><rect fill="#F1F1F1" height="52.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="170" x="35" y="408.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="45" y="431.292">VLM Worker (optional)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="48" y="447.5889">- Periodic summaries</text></g><!--MD5=[e77a694c83dfc529289cb0772ba61b17]
+entity Qdb--><g id="elem_Qdb"><path d="M889.5,421.7969 L1014.5,421.7969 C1019.5,421.7969 1019.5,434.9453 1019.5,434.9453 C1019.5,434.9453 1019.5,448.0938 1014.5,448.0938 L889.5,448.0938 C884.5,448.0938 884.5,434.9453 884.5,434.9453 C884.5,434.9453 884.5,421.7969 889.5,421.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M1014.5,421.7969 C1009.5,421.7969 1009.5,434.9453 1009.5,434.9453 C1009.5,448.0938 1014.5,448.0938 1014.5,448.0938 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="889.5" y="439.792">db_writer_queue</text></g><!--MD5=[32e5654badb116bf50f599b6ced6648c]
+entity Qvlm--><g id="elem_Qvlm"><path d="M1059.5,421.7969 L1180.5,421.7969 C1185.5,421.7969 1185.5,434.9453 1185.5,434.9453 C1185.5,434.9453 1185.5,448.0938 1180.5,448.0938 L1059.5,448.0938 C1054.5,448.0938 1054.5,434.9453 1054.5,434.9453 C1054.5,434.9453 1054.5,421.7969 1059.5,421.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M1180.5,421.7969 C1175.5,421.7969 1175.5,434.9453 1175.5,434.9453 C1175.5,448.0938 1180.5,448.0938 1180.5,448.0938 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="1059.5" y="439.792">vlm_task_queue</text></g><!--MD5=[32cfcca21bab0fcc5adfaafa6de18b8a]
+entity Qvlmr--><g id="elem_Qvlmr"><path d="M713.5,421.7969 L844.5,421.7969 C849.5,421.7969 849.5,434.9453 849.5,434.9453 C849.5,434.9453 849.5,448.0938 844.5,448.0938 L713.5,448.0938 C708.5,448.0938 708.5,434.9453 708.5,434.9453 C708.5,434.9453 708.5,421.7969 713.5,421.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M844.5,421.7969 C839.5,421.7969 839.5,434.9453 839.5,434.9453 C839.5,448.0938 844.5,448.0938 844.5,448.0938 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="713.5" y="439.792">vlm_result_queue</text></g><!--MD5=[79afa157d97a608733f7075fb48825e6]
+entity TrackedSubjects\n(tracking_id, reid_vector, current_camera_id, ...)--><g id="elem_TrackedSubjects\n(tracking_id, reid_vector, current_camera_id, ...)"><rect fill="#F1F1F1" height="68.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="191" x="30.5" y="634.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="68" y="657.292">TrackedSubjects</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="40.5" y="673.5889">(tracking_id, reid_vector,</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="50" y="689.8857">current_camera_id, ...)</text></g><!--MD5=[1fdded0352c3e8b8e8e5fa4c440e3206]
+entity Events--><g id="elem_Events"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="67" x="256.5" y="650.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="266.5" y="673.792">Events</text></g><!--MD5=[7751deb5c188c0a913ec59584343c19c]
+entity VlmLogs (optional)--><g id="elem_VlmLogs (optional)"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="52.5" y="781.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="62.5" y="804.792">VlmLogs (optional)</text></g><!--MD5=[1b76df3a4bd008a21abb34082ebb9919]
+entity Cameras--><g id="elem_Cameras"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="81" x="868.5" y="44.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="878.5" y="67.292">Cameras</text></g><g id="elem_GMN447"><path d="M1220.5,399.2969 L1220.5,469.8281 L1443.5,469.8281 L1443.5,409.2969 L1433.5,399.2969 L1220.5,399.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1433.5,399.2969 L1433.5,409.2969 L1443.5,409.2969 L1433.5,399.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="33" x="1311" y="416.3638">ReID:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="184" x="1235.5" y="431.4966">- kNN similarity (e.g., cosine)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="202" x="1226.5" y="446.6294">- Threshold + short consistency</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="1249.5" y="461.7622">- Reuse ID or create new</text></g><g id="elem_GMN450"><path d="M390.5,764.2969 L390.5,834.8281 L595.5,834.8281 L595.5,774.2969 L585.5,764.2969 L390.5,764.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M585.5,764.2969 L585.5,774.2969 L595.5,774.2969 L585.5,764.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="412.5" y="781.3638">- camera_id references</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="448.5" y="796.4966">Cameras._id</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="180" x="396.5" y="811.6294">- reid_vector can use Vector</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="45" x="466" y="826.7622">Search</text></g><g id="elem_GMN453"><path d="M382.5,896.7969 L382.5,952.1953 A0,0 0 0 0 382.5,952.1953 L603.5,952.1953 A0,0 0 0 0 603.5,952.1953 L603.5,906.7969 L593.5,896.7969 L497,896.7969 L493,835.5769 L489,896.7969 L382.5,896.7969 A0,0 0 0 0 382.5,896.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M593.5,896.7969 L593.5,906.7969 L603.5,906.7969 L593.5,896.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196" x="388.5" y="913.8638">Scale by adding Detectors and</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="445.5" y="928.9966">VLM Workers.</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="195" x="391" y="944.1294">Headless run: no GUI windows.</text></g><!--MD5=[f111fffa0d16347856209836b3c04c53]
+link Cameras to Det--><g id="link_Cameras_Det"><path d="M909,80.5869 C909,106.7269 909,156.9469 909,192.0969 " fill="none" id="Cameras-to-Det" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="909,197.1669,913,188.1669,909,192.1669,905,188.1669,909,197.1669" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="910" y="123.3638">video streams</text></g><!--MD5=[d658b62afcf8076eb47cdd17a9a821bf]
+link Det to Matcher--><g id="link_Det_Matcher"><path d="M836.2,235.5269 C742.48,240.7569 587.45,255.7569 552,298.2969 C529.38,325.4469 542.52,365.9569 557.88,395.6069 " fill="none" id="Det-to-Matcher" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="560.35,400.2769,559.6639,390.4519,558.006,395.8604,552.5975,394.2024,560.35,400.2769" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="161" x="553" y="318.8638">embedding + track meta</text></g><!--MD5=[468878b55d25926fdeaa7600ad368618]
+link Det to Qdb--><g id="link_Det_Qdb"><path d="M904.04,266.5369 C902.23,285.4769 901.57,309.4269 906,330.2969 C912.88,362.7069 930.63,397.2869 941.96,417.1469 " fill="none" id="Det-to-Qdb" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="944.55,421.6269,943.4985,411.8343,942.0431,417.3007,936.5767,415.8453,944.55,421.6269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="907" y="318.8638">event actions (create/end)</text></g><!--MD5=[81185bef3cb212abce52384790010cd6]
+link Matcher to Qdb--><g id="link_Matcher_Qdb"><path d="M609.66,400.1669 C635.26,371.6769 676.27,334.3969 722.5,324.2969 C777.64,312.2469 796.24,305.6169 849.5,324.2969 C894.78,340.1769 927.79,390.0169 942.87,417.0069 " fill="none" id="Matcher-to-Qdb" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="945.3,421.4469,944.4885,411.6315,942.8997,417.0607,937.4706,415.4719,945.3,421.4469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="723.5" y="311.3638">subject assignment</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="733.5" y="326.4966">(existing/new ID)</text></g><!--MD5=[730c8ad0c67b46c623db447206c610fd]
+link Det to Qvlm--><g id="link_Det_Qvlm"><path d="M981.51,244.8369 C1015.96,254.0569 1055.15,270.1969 1081,298.2969 C1111.76,331.7469 1118.42,387.9269 1119.75,416.2869 " fill="none" id="Det-to-Qvlm" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1119.95,421.5769,1123.6132,412.4346,1119.7644,416.5803,1115.6187,412.7315,1119.95,421.5769" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="1102" y="318.8638">analyze_threat (optional)</text></g><!--MD5=[cd52550a0905dfb53f7941a977ca8ce2]
+link VLM to Qvlmr--><g id="link_VLM_Qvlmr"><path d="M139.54,408.1969 C158.14,385.1869 188.38,353.3069 223,338.2969 C263.45,320.7569 277.93,333.2469 322,331.7969 C475.72,326.7569 524.69,282.4469 668,338.2969 C710.11,354.7069 747.05,394.5469 765.84,417.5769 " fill="none" id="VLM-to-Qvlmr" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="769.13,421.6769,766.6014,412.1581,765.9943,417.7823,760.3701,417.1752,769.13,421.6769" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="323" y="318.8638">results (optional)</text></g><!--MD5=[5513449c5eb384e50e56d6bcb0ed6d80]
+link DBW to MDB--><g id="link_DBW_MDB"><path d="M359,461.5069 C359,476.3719 359,496.4138 359,518.1842 C359,523.6268 359,529.1775 359,534.7823 C359,536.1835 359,537.5881 359,538.9952 C359,539.6988 359,540.403 359,541.1077 C359,541.4601 359,541.8126 359,542.1652 " fill="none" id="DBW-to-MDB" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="359,542.1652,363,533.1652,359,537.1652,355,533.1652,359,542.1652" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="360" y="514.3638">writes (upserts)</text></g><!--MD5=[1f47911f154117a69f42723a123d81c6]
+link Qdb to DBW--><g id="link_Qdb_DBW"><path d="M945.8,421.7669 C932.49,395.5169 898.36,336.8869 849.5,314.2969 C781.52,282.8769 583.28,289.8369 512.5,314.2969 C461.17,332.0369 413.94,374.8069 385.79,404.3069 " fill="none" id="Qdb-to-DBW" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="382.12,408.1969,391.209,404.4034,385.5544,404.563,385.3948,398.9084,382.12,408.1969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ccd0c1265587bbf27ab47f87b839237f]
+link Qvlm to VLM--><g id="link_Qvlm_VLM"><path d="M1113.99,421.7769 C1101.08,395.5469 1067.86,336.9369 1019.5,314.2969 C980.3,295.9469 280.48,297.7369 240.5,314.2969 C196.99,332.3169 161,374.5169 140,403.8569 " fill="none" id="Qvlm-to-VLM" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="137.01,408.0869,145.4694,403.0432,139.8945,404.0028,138.9349,398.428,137.01,408.0869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[32426d7e6ccd67455918d802526b2d34]
+link Matcher to GMN447--><g id="link_Matcher_GMN447"><path d="M606.51,400.0569 C629.36,370.9369 666.34,331.4669 709.5,314.2969 C758.54,294.7869 1134.79,296.5769 1184.5,314.2969 C1231.53,331.0669 1274.4,369.9769 1301.65,399.0769 " fill="none" id="Matcher-GMN447" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[2d71ad1cc7bb9187afe2ce9035159cf8]
+link MDB to GMN450--><g id="link_MDB_GMN450"><path d="M367.036,677.531 C367.1215,677.6133 367.2075,677.6962 367.2942,677.7796 C367.4675,677.9465 367.6432,678.1157 367.8212,678.2871 C368.5333,678.9728 369.2827,679.6943 370.0672,680.4497 C376.3431,686.4925 384.8663,694.6981 394.5175,703.9894 C413.82,722.5719 437.635,745.4969 457.01,764.1469 " fill="none" id="MDB-GMN450" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[5ece384008ed1ee2f21c42f40e6f0372]
+@startuml
+' Guardian-AI - System Design (Technical Overview)
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam wrapWidth 220
+
+title Guardian-AI - System Design (Headless, ReID)
+
+rectangle "Cameras (N)" as Cameras
+
+package "Detectors (1 per camera)" as Detectors {
+  component "Detector\n- Person detect\n- ReID embedding" as Det
+}
+
+package "Core Services" as Core {
+  component "ReID Matcher\n- Similarity search\n- ID assignment" as Matcher
+  component "DB Writer\n- Upserts Subjects/Events/Logs" as DBW
+  component "VLM Worker (optional)\n- Periodic summaries" as VLM
+}
+
+package "Queues" as Q {
+  queue "db_writer_queue" as Qdb
+  queue "vlm_task_queue" as Qvlm
+  queue "vlm_result_queue" as Qvlmr
+}
+
+database "MongoDB" as MDB {
+  [Cameras]
+  [TrackedSubjects\n(tracking_id, reid_vector, current_camera_id, ...)]
+  [Events]
+  [VlmLogs (optional)]
+}
+
+' Data flow
+Cameras - -> Det : video streams
+Det - -> Matcher : embedding + track meta
+Det - -> Qdb : event actions (create/end)
+Matcher - -> Qdb : subject assignment\n(existing/new ID)
+Det - -> Qvlm : analyze_threat (optional)
+VLM - -> Qvlmr : results (optional)
+DBW - -> MDB : writes (upserts)
+
+' Queue consumption
+Qdb - -> DBW
+Qvlm - -> VLM
+
+note right of Matcher
+ReID:
+- kNN similarity (e.g., cosine)
+- Threshold + short consistency
+- Reuse ID or create new
+end note
+
+note bottom of MDB
+- camera_id references Cameras._id
+- reid_vector can use Vector Search
+end note
+
+note bottom
+Scale by adding Detectors and VLM Workers.
+Headless run: no GUI windows.
+end note
+@enduml
+
+@startuml
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam wrapWidth 220
+
+title Guardian-AI - System Design (Headless, ReID)
+
+rectangle "Cameras (N)" as Cameras
+
+package "Detectors (1 per camera)" as Detectors {
+  component "Detector\n- Person detect\n- ReID embedding" as Det
+}
+
+package "Core Services" as Core {
+  component "ReID Matcher\n- Similarity search\n- ID assignment" as Matcher
+  component "DB Writer\n- Upserts Subjects/Events/Logs" as DBW
+  component "VLM Worker (optional)\n- Periodic summaries" as VLM
+}
+
+package "Queues" as Q {
+  queue "db_writer_queue" as Qdb
+  queue "vlm_task_queue" as Qvlm
+  queue "vlm_result_queue" as Qvlmr
+}
+
+database "MongoDB" as MDB {
+  [Cameras]
+  [TrackedSubjects\n(tracking_id, reid_vector, current_camera_id, ...)]
+  [Events]
+  [VlmLogs (optional)]
+}
+
+Cameras - -> Det : video streams
+Det - -> Matcher : embedding + track meta
+Det - -> Qdb : event actions (create/end)
+Matcher - -> Qdb : subject assignment\n(existing/new ID)
+Det - -> Qvlm : analyze_threat (optional)
+VLM - -> Qvlmr : results (optional)
+DBW - -> MDB : writes (upserts)
+
+Qdb - -> DBW
+Qvlm - -> VLM
+
+note right of Matcher
+ReID:
+- kNN similarity (e.g., cosine)
+- Threshold + short consistency
+- Reuse ID or create new
+end note
+
+note bottom of MDB
+- camera_id references Cameras._id
+- reid_vector can use Vector Search
+end note
+
+note bottom
+Scale by adding Detectors and VLM Workers.
+Headless run: no GUI windows.
+end note
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

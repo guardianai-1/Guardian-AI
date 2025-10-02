@@ -1,0 +1,65 @@
+@startuml
+' Guardian-AI – System Design (Technical Overview)
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam wrapWidth 220
+
+title Guardian-AI – System Design (Headless, ReID)
+
+rectangle "Cameras (N)" as Cameras
+
+package "Detectors (1 per camera)" as Detectors {
+  component "Detector\n- Person detect\n- ReID embedding" as Det
+}
+
+package "Core Services" as Core {
+  component "ReID Matcher\n- Similarity search\n- ID assignment" as Matcher
+  component "DB Writer\n- Upserts Subjects/Events/Logs" as DBW
+  component "VLM Worker (optional)\n- Periodic summaries" as VLM
+}
+
+package "Queues" as Q {
+  queue "db_writer_queue" as Qdb
+  queue "vlm_task_queue" as Qvlm
+  queue "vlm_result_queue" as Qvlmr
+}
+
+database "MongoDB" as MDB {
+  [Cameras]
+  [TrackedSubjects\n(tracking_id, reid_vector, current_camera_id, ...)]
+  [Events]
+  [VlmLogs (optional)]
+}
+
+' Data flow
+Cameras --> Det : video streams
+Det --> Matcher : embedding + track meta
+Det --> Qdb : event actions (create/end)
+Matcher --> Qdb : subject assignment\n(existing/new ID)
+Det --> Qvlm : analyze_threat (optional)
+VLM --> Qvlmr : results (optional)
+DBW --> MDB : writes (upserts)
+
+' Queue consumption
+Qdb --> DBW
+Qvlm --> VLM
+
+note right of Matcher
+ReID:
+- kNN similarity (e.g., cosine)
+- Threshold + short consistency
+- Reuse ID or create new
+end note
+
+note bottom of MDB
+- camera_id references Cameras._id
+- reid_vector can use Vector Search
+end note
+
+note bottom
+Scale by adding Detectors and VLM Workers.
+Headless run: no GUI windows.
+end note
+
+@enduml

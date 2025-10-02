@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1182px" preserveAspectRatio="none" style="width:759px;height:1182px;background:#FFFFFF;" version="1.1" viewBox="0 0 759 1182" width="759px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.2969" id="_title" style="stroke:none;stroke-width:1.0;" width="473" x="136.25" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="463" x="141.25" y="22.9951">Conference ReID - Mixed Overview (No On‑Screen Display)</text><!--MD5=[dffe38c7e87a0fb35c74118da4f11949]
+cluster Conference Venue--><g id="cluster_Conference Venue"><path d="M262.5,181.7969 L412.5,181.7969 A3.75,3.75 0 0 1 415,184.2969 L422,204.0938 L422.5,204.0938 A2.5,2.5 0 0 1 425,206.5938 L425,266.2969 A2.5,2.5 0 0 1 422.5,268.7969 L262.5,268.7969 A2.5,2.5 0 0 1 260,266.2969 L260,184.2969 A2.5,2.5 0 0 1 262.5,181.7969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="260" x2="422" y1="204.0938" y2="204.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="149" x="264" y="196.792">Conference Venue</text></g><!--MD5=[fa0332a2969a82c9de1863bec10143fc]
+cluster Demo System (Headless)--><g id="cluster_Demo System (Headless)"><path d="M226.5,317.7969 L424.5,317.7969 A3.75,3.75 0 0 1 427,320.2969 L434,340.0938 L492.5,340.0938 A2.5,2.5 0 0 1 495,342.5938 L495,743.2969 A2.5,2.5 0 0 1 492.5,745.7969 L226.5,745.7969 A2.5,2.5 0 0 1 224,743.2969 L224,320.2969 A2.5,2.5 0 0 1 226.5,317.7969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="224" x2="434" y1="340.0938" y2="340.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="197" x="228" y="332.792">Demo System (Headless)</text></g><!--MD5=[e169ac431914a6adb8cf110c9da1459f]
+cluster DB--><g id="cluster_DB"><path d="M6,812.7969 C6,802.7969 159,802.7969 159,802.7969 C159,802.7969 312,802.7969 312,812.7969 L312,1032.7969 C312,1042.7969 159,1042.7969 159,1042.7969 C159,1042.7969 6,1042.7969 6,1032.7969 L6,812.7969 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><path d="M6,812.7969 C6,822.7969 159,822.7969 159,822.7969 C159,822.7969 312,822.7969 312,812.7969 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="74" x="122" y="837.792">MongoDB</text></g><!--MD5=[1b76df3a4bd008a21abb34082ebb9919]
+entity Cameras--><g id="elem_Cameras"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="81" x="301.5" y="216.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="311.5" y="239.792">Cameras</text></g><!--MD5=[ee875bf5169e2671d89a67fde10baad5]
+entity Detector--><g id="elem_Detector"><rect fill="#F1F1F1" height="68.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="204" x="240" y="352.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="311.5" y="375.792">Detector</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="278" y="392.0889">- Person detection</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184" x="250" y="408.3857">- Extract ReID embeddings</text></g><!--MD5=[0b4846db015581273f652c6d394a5ede]
+entity Matcher--><g id="elem_Matcher"><rect fill="#F1F1F1" height="68.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="177" x="239.5" y="514.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="281.5" y="537.792">ReID Matcher</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="270.5" y="554.0889">- Similarity match</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="249.5" y="570.3857">- Assign known/new ID</text></g><!--MD5=[ae6719e747a24c00f53ebd9888a19a9a]
+entity DBW--><g id="elem_DBW"><rect fill="#F1F1F1" height="52.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="240.5" y="676.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="271.5" y="699.792">DB Writer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="250.5" y="716.0889">- Persist results</text></g><!--MD5=[17c4d802892108afb89dbd61566cb645]
+entity TrackedSubjects--><g id="elem_TrackedSubjects"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="30" y="860.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="40" y="883.792">TrackedSubjects</text></g><!--MD5=[1fdded0352c3e8b8e8e5fa4c440e3206]
+entity Events--><g id="elem_Events"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="67" x="201.5" y="860.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="211.5" y="883.792">Events</text></g><!--MD5=[7751deb5c188c0a913ec59584343c19c]
+entity VlmLogs (optional)--><g id="elem_VlmLogs (optional)"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="30.5" y="982.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="40.5" y="1005.792">VlmLogs (optional)</text></g><!--MD5=[4426415451ec8a51014ba9ecc7b24cee]
+entity People--><g id="elem_People"><ellipse cx="342" cy="51.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M342,59.2969 L342,86.2969 M329,67.2969 L355,67.2969 M342,86.2969 L329,101.2969 M342,86.2969 L355,101.2969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="306" y="115.792">Attendees</text></g><g id="elem_GMN279"><path d="M511.5,498.7969 L511.5,545.2969 L416.77,549.2969 L511.5,553.2969 L511.5,599.5938 A0,0 0 0 0 511.5,599.5938 L752.5,599.5938 A0,0 0 0 0 752.5,599.5938 L752.5,508.7969 L742.5,498.7969 L511.5,498.7969 A0,0 0 0 0 511.5,498.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M742.5,498.7969 L742.5,508.7969 L752.5,508.7969 L742.5,498.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="590.5" y="515.8638">ReID check:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="206" x="522.5" y="530.9966">- Compare embedding to stored</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="31" x="612" y="546.1294">ones</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="203" x="524" y="561.2622">- If similarity stays high briefly →</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="601" y="576.395">reuse ID</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="220" x="517.5" y="591.5278">- Else → create new anonymous ID</text></g><g id="elem_GMN282"><path d="M336.5,957.7969 L336.5,1043.4609 L589.5,1043.4609 L589.5,967.7969 L579.5,957.7969 L336.5,957.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M579.5,957.7969 L579.5,967.7969 L589.5,967.7969 L579.5,957.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="216" x="348.5" y="974.8638">All records tagged with camera_id</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="424.5" y="989.9966">(Cameras)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="228" x="342.5" y="1005.1294">Embeddings can use Vector Search</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="34" x="441.5" y="1020.2622">index</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="207" x="355" y="1035.395">No on‑screen display during test</text></g><g id="elem_GMN285"><path d="M333.5,1104.7969 L333.5,1175.3281 A0,0 0 0 0 333.5,1175.3281 L592.5,1175.3281 A0,0 0 0 0 592.5,1175.3281 L592.5,1114.7969 L582.5,1104.7969 L467,1104.7969 L463,1043.7969 L459,1104.7969 L333.5,1104.7969 A0,0 0 0 0 333.5,1104.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M582.5,1104.7969 L582.5,1114.7969 L592.5,1114.7969 L582.5,1104.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="234" x="339.5" y="1121.8638">Scale by adding cameras &amp; detector</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="428" y="1136.9966">instances</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="195" x="359" y="1152.1294">Optionally enable periodic VLM</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="422.5" y="1167.2622">summaries</text></g><!--MD5=[2a5d4a3f68aa9e445a49bb7cb35c3f7d]
+link People to Cameras--><g id="link_People_Cameras"><path d="M342,118.9769 C342,147.9069 342,187.0869 342,211.3869 " fill="none" id="People-to-Cameras" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="342,216.6269,346.0257,207.6383,342.0143,211.6269,338.0257,207.6155,342,216.6269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="343" y="161.8638">In view</text></g><!--MD5=[970d54563625b8477af1805af8223d84]
+link Cameras to Detector--><g id="link_Cameras_Detector"><path d="M342,253.0569 C342,275.9069 342,316.8469 342,347.3369 " fill="none" id="Cameras-to-Detector" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="342,352.5169,346,343.5169,342,347.5169,338,343.5169,342,352.5169" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="343" y="297.8638">Live streams</text></g><!--MD5=[7c0ec6ff048c94f6d86a372fade149d4]
+link Detector to Matcher--><g id="link_Detector_Matcher"><path d="M339.07,421.8369 C336.83,447.3569 333.76,482.5169 331.41,509.2869 " fill="none" id="Detector-to-Matcher" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="330.96,514.5269,335.7428,505.9173,331.4036,509.5466,327.7743,505.2075,330.96,514.5269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="338" y="464.8638">Embedding + track info</text></g><!--MD5=[f0c99f3f06243eeb19adc1de8a2679c0]
+link Matcher to DBW--><g id="link_Matcher_DBW"><path d="M322.67,584.0269 C318.55,610.1569 312.88,646.0669 308.87,671.4369 " fill="none" id="Matcher-to-DBW" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="308.04,676.6869,313.3836,668.4137,308.8132,671.747,305.4799,667.1766,308.04,676.6869" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="202" x="317" y="642.8638">Known ID or New anonymous ID</text></g><!--MD5=[d9677d76b28236e797ce65ee921b6485]
+link DBW to DB--><g id="link_DBW_DB"><path d="M304,729.8969 C304,741.7744 304,756.7631 304,772.6125 C304,780.5372 304,788.677 304,796.7507 C304,798.7691 304,800.7834 304,802.7892 " fill="none" id="DBW-to-DB" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="304,802.7892,308,793.7892,304,797.7892,300,793.7892,304,802.7892" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="184" x="305" y="774.8638">Upserts subjects/events/logs</text></g><!--MD5=[8f5af011e2762b7c701f741a2cfc6f77]
+link DB to GMN282--><g id="link_DB_GMN282"><path d="M312.094,885.9044 C312.1796,885.969 312.2659,886.0341 312.3527,886.0996 C312.5263,886.2307 312.7024,886.3636 312.8808,886.4982 C313.5944,887.0368 314.3459,887.6039 315.1333,888.1981 C321.4322,892.9519 330.0281,899.4394 339.9288,906.9119 C359.73,921.8569 384.75,940.7419 407.05,957.5769 " fill="none" id="DB-GMN282" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[0d27ca645e034d96cffbdc9ead26d16f]
+@startuml
+' Conference ReID - Mixed Overview (Headless)
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam wrapWidth 240
+skinparam componentStyle rectangle
+
+title Conference ReID - Mixed Overview (No On‑Screen Display)
+
+actor "Attendees" as People
+
+package "Conference Venue" {
+  rectangle "Cameras (Multiple)" as Cameras
+}
+
+package "Demo System (Headless)" {
+  rectangle "Detector\n- Person detection\n- Extract ReID embeddings" as Detector
+  rectangle "ReID Matcher\n- Similarity match\n- Assign known/new ID" as Matcher
+  rectangle "DB Writer\n- Persist results" as DBW
+}
+
+database "MongoDB" as DB {
+  [Cameras]
+  [TrackedSubjects]
+  [Events]
+  [VlmLogs (optional)]
+}
+
+' Data flow (concise)
+People - -> Cameras : In view
+Cameras - -> Detector : Live streams
+Detector - -> Matcher : Embedding + track info
+Matcher - -> DBW : Known ID or New anonymous ID
+DBW - -> DB : Upserts subjects/events/logs
+
+note right of Matcher
+ReID check:
+- Compare embedding to stored ones
+- If similarity stays high briefly → reuse ID
+- Else → create new anonymous ID
+end note
+
+note bottom of DB
+All records tagged with camera_id (Cameras)
+Embeddings can use Vector Search index
+No on‑screen display during test
+end note
+
+note bottom
+Scale by adding cameras & detector instances
+Optionally enable periodic VLM summaries
+end note
+@enduml
+
+@startuml
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam wrapWidth 240
+skinparam componentStyle rectangle
+
+title Conference ReID - Mixed Overview (No On‑Screen Display)
+
+actor "Attendees" as People
+
+package "Conference Venue" {
+  rectangle "Cameras (Multiple)" as Cameras
+}
+
+package "Demo System (Headless)" {
+  rectangle "Detector\n- Person detection\n- Extract ReID embeddings" as Detector
+  rectangle "ReID Matcher\n- Similarity match\n- Assign known/new ID" as Matcher
+  rectangle "DB Writer\n- Persist results" as DBW
+}
+
+database "MongoDB" as DB {
+  [Cameras]
+  [TrackedSubjects]
+  [Events]
+  [VlmLogs (optional)]
+}
+
+People - -> Cameras : In view
+Cameras - -> Detector : Live streams
+Detector - -> Matcher : Embedding + track info
+Matcher - -> DBW : Known ID or New anonymous ID
+DBW - -> DB : Upserts subjects/events/logs
+
+note right of Matcher
+ReID check:
+- Compare embedding to stored ones
+- If similarity stays high briefly → reuse ID
+- Else → create new anonymous ID
+end note
+
+note bottom of DB
+All records tagged with camera_id (Cameras)
+Embeddings can use Vector Search index
+No on‑screen display during test
+end note
+
+note bottom
+Scale by adding cameras & detector instances
+Optionally enable periodic VLM summaries
+end note
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
